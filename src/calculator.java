@@ -94,7 +94,7 @@ public class calculator implements ActionListener{
 
     public static void main(String[] args){
 
-        calculator cal = new calculator();
+//        calculator cal = new calculator();
 
     }
 
@@ -130,19 +130,11 @@ public class calculator implements ActionListener{
         }
         if(e.getSource() == equButton){
             num2 = Double.parseDouble(textfield.getText());
-            switch(operator){
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    result = num1 / num2;
-                    break;
+            switch (operator) {
+                case '+' -> result = num1 + num2;
+                case '-' -> result = num1 - num2;
+                case '*' -> result = num1 * num2;
+                case '/' -> result = num1 / num2;
             }
             textfield.setText(String.valueOf(result));
             num1 = result;
